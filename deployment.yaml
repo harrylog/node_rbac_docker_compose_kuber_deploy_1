@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jwt-practice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jwt-practice
+  template:
+    metadata:
+      labels:
+        app: jwt-practice
+    spec:
+      containers:
+        - name: jwt-practice
+          image: hrylog/node-jwt-docker-kuber-1:first
+          ports:
+            - containerPort: 5000
+              name: http

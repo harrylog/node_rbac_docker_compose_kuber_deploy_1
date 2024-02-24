@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI_ATLAS=mongodb+srv://harry:harry8atlas@cluster0-tj0q8.mongodb.net/jwtPractice?retryWrites=true&w=majority
